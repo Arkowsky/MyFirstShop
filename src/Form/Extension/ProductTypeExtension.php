@@ -18,7 +18,12 @@ final class ProductTypeExtension extends AbstractTypeExtension
         // @TODO: add translation
         $builder
             ->add('color', ChoiceType::class, [
-                'choices' => array_combine(Product::COLORS, Product::COLORS),
+                'choices' => array_combine(
+                    array_map(function($color) {
+                        return "app.form.product.colors.$color";
+                    }, Product::COLORS),
+                    Product::COLORS
+                ),
                 'required' => false,
                 'label' => 'app.form.product.color'
             ]);

@@ -2,3 +2,7 @@ app:
     form:
         product:
             color: 'Kolor'
+            colors:
+                red: 'Czerwony'
+                blue: 'Niebieski'
+                green: 'Zielony'
