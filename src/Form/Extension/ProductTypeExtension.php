@@ -15,7 +15,6 @@ final class ProductTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        // @TODO: add translation
         $builder
             ->add('color', ChoiceType::class, [
                 'choices' => array_combine(
