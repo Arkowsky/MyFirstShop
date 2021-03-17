@@ -37,3 +37,8 @@ services:
     App\Menu\AdminMenuListener:
         tags:
             - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+    app.form.extension.type.product:
+        class: App\Form\Extension\ProductTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\AdminApiBundle\Form\Type\ProductType }

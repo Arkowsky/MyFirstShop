@@ -19,7 +19,7 @@ class Product extends BaseProduct
     public const COLOR_GREEN = 'green';
 
     /**
-     * @var string
+     * @var null|string
      * @ORM\Column(type="string", nullable=true)
      */
     private $color;
@@ -30,17 +30,17 @@ class Product extends BaseProduct
     }
 
     /**
-     * @return string
+     * @return null|string
      */
-    public function getColor(): string
+    public function getColor(): ?string
     {
         return $this->color;
     }
 
     /**
-     * @param string $color
+     * @param null|string $color
      */
-    public function setColor(string $color): void
+    public function setColor(?string $color): void
     {
         $this->color = $color;
     }
