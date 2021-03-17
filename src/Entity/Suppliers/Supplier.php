@@ -16,11 +16,15 @@ class Supplier implements ResourceInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     *
+     * @var int
      */
     private $id;
 
     /**
      * @ORM\Column(type="string")
+     *
+     * @var string
      */
     public $name;
 
@@ -29,7 +33,7 @@ class Supplier implements ResourceInterface
         return $this->id;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
