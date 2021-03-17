@@ -1,0 +1,7 @@
+sylius_resource:
+    resources:
+        app.supplier:
+            driver: doctrine/orm # You can use also different driver here
+            classes:
+                model: App\Entity\Suppliers\Supplier
+                repository: App\Repository\Suppliers\SupplierRepository
