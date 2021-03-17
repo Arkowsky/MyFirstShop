@@ -5,17 +5,20 @@ declare(strict_types=1);
 namespace App\Form\Extension;
 
 
-use Doctrine\DBAL\Types\TextType;
-use Sylius\Bundle\AdminApiBundle\Form\Type\ProductType;
+use App\Entity\Product\Product;
+use Sylius\Bundle\ProductBundle\Form\Type\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 final class ProductTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        // @TODO: add translation
         $builder
-            ->add('color', TextType::class, [
+            ->add('color', ChoiceType::class, [
+                'choices' => array_combine(Product::COLORS, Product::COLORS),
                 'required' => false,
                 'label' => 'app.form.product.color'
             ]);

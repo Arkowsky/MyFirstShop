@@ -41,4 +41,4 @@ services:
     app.form.extension.type.product:
         class: App\Form\Extension\ProductTypeExtension
         tags:
-            - { name: form.type_extension, extended_type: Sylius\Bundle\AdminApiBundle\Form\Type\ProductType }
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType }

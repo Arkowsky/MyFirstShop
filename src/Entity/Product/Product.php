@@ -17,6 +17,11 @@ class Product extends BaseProduct
     public const COLOR_RED = 'red';
     public const COLOR_BLUE = 'blue';
     public const COLOR_GREEN = 'green';
+    public const COLORS = [
+        self::COLOR_RED,
+        self::COLOR_BLUE,
+        self::COLOR_GREEN
+    ];
 
     /**
      * @var null|string
