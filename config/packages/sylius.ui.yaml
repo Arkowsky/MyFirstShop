@@ -1,0 +1,5 @@
+sylius_ui:
+    events:
+        sylius.shop.product.show.right_sidebar:
+            blocks:
+                product_color: '@SyliusShop/Product/Show/_color.html.twig'
